@@ -1,0 +1,105 @@
+[
+  {
+    "id": "alice_employer_current",
+    "user_id": "fx-alice",
+    "session_id": "probe-1",
+    "query": "Where does this user work right now?",
+    "expected_any": ["Notion"],
+    "forbidden": ["currently at Stripe", "works at Stripe", "Stripe engineer"],
+    "category": "fact_evolution"
+  },
+  {
+    "id": "alice_employer_history",
+    "user_id": "fx-alice",
+    "session_id": "probe-2",
+    "query": "What did the user used to do before their current job?",
+    "expected_any": ["Stripe", "engineer"],
+    "forbidden": [],
+    "category": "fact_history"
+  },
+  {
+    "id": "alice_city_current",
+    "user_id": "fx-alice",
+    "session_id": "probe-3",
+    "query": "What city does the user live in?",
+    "expected_any": ["Berlin"],
+    "forbidden": ["lives in San Francisco", "currently in SF"],
+    "category": "fact_evolution"
+  },
+  {
+    "id": "alice_pet_name",
+    "user_id": "fx-alice",
+    "session_id": "probe-4",
+    "query": "Does the user have a pet? What's its name?",
+    "expected_any": ["Biscuit"],
+    "forbidden": [],
+    "category": "implicit_fact"
+  },
+  {
+    "id": "alice_multihop_city_via_pet",
+    "user_id": "fx-alice",
+    "session_id": "probe-5",
+    "query": "What city does the user with the dog named Biscuit live in?",
+    "expected_any": ["Berlin"],
+    "forbidden": ["San Francisco", "SF"],
+    "category": "multi_hop"
+  },
+  {
+    "id": "bob_dietary",
+    "user_id": "fx-bob",
+    "session_id": "probe-6",
+    "query": "Any dietary considerations I should know about for this user?",
+    "expected_any": ["vegetarian", "shellfish"],
+    "forbidden": [],
+    "category": "preference"
+  },
+  {
+    "id": "bob_typescript_now",
+    "user_id": "fx-bob",
+    "session_id": "probe-7",
+    "query": "What does the user currently think about TypeScript?",
+    "expected_any": ["fine for big projects", "annoying", "generics", "Python for scripts"],
+    "forbidden": [],
+    "category": "opinion_arc"
+  },
+  {
+    "id": "bob_correction",
+    "user_id": "fx-bob",
+    "session_id": "probe-8",
+    "query": "Where did the user say they were treated for their shellfish reaction?",
+    "expected_any": ["urgent care"],
+    "forbidden": ["the ER", "emergency room"],
+    "category": "correction"
+  },
+  {
+    "id": "noise_irrelevant_capital",
+    "user_id": "fx-alice",
+    "session_id": "probe-9",
+    "query": "What is the capital of France?",
+    "expected_any": [],
+    "forbidden": ["Notion", "Berlin", "Biscuit", "Stripe"],
+    "category": "noise_resistance",
+    "expect_empty_context": true
+  },
+  {
+    "id": "noise_irrelevant_nginx",
+    "user_id": "fx-bob",
+    "session_id": "probe-10",
+    "query": "How do I configure nginx as a reverse proxy?",
+    "expected_any": [],
+    "forbidden": ["vegetarian", "TypeScript", "shellfish"],
+    "category": "noise_resistance",
+    "expect_empty_context": true
+  },
+  {
+    "id": "cross_scope_isolation",
+    "user_id": "fx-alice",
+    "session_id": "probe-11",
+    "query": "What does this user think about TypeScript?",
+    "expected_any": [],
+    "forbidden": ["TypeScript is fine", "love TypeScript", "annoying"],
+    "category": "scope_isolation",
+    "expect_empty_context": true,
+    "comment": "fx-alice never discussed TypeScript; fx-bob did. Recall must not bleed."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "user_id": "fx-alice",
+    "session_id": "fx-alice-s1",
+    "timestamp": "2025-01-15T09:00:00Z",
+    "messages": [
+      {"role": "user", "content": "Hey, getting back from a stand-up. I'm an engineer at Stripe — been here three years. Based in San Francisco. Coffee or it doesn't count."},
+      {"role": "assistant", "content": "Got it — engineer at Stripe in SF, coffee-fueled. What can I help with?"}
+    ]
+  },
+  {
+    "user_id": "fx-alice",
+    "session_id": "fx-alice-s1",
+    "timestamp": "2025-01-15T09:05:00Z",
+    "messages": [
+      {"role": "user", "content": "Also, had to take Biscuit on a long walk this morning before the meeting. He doesn't tolerate skipped walks."},
+      {"role": "assistant", "content": "Biscuit clearly runs a tight ship."}
+    ]
+  },
+  {
+    "user_id": "fx-alice",
+    "session_id": "fx-alice-s2",
+    "timestamp": "2025-03-20T14:30:00Z",
+    "messages": [
+      {"role": "user", "content": "Big update — I just joined Notion as a product manager and moved to Berlin last month. Loving it so far."},
+      {"role": "assistant", "content": "Big shift! PM at Notion in Berlin. Congrats."}
+    ]
+  },
+  {
+    "user_id": "fx-alice",
+    "session_id": "fx-alice-s3",
+    "timestamp": "2025-04-02T08:15:00Z",
+    "messages": [
+      {"role": "user", "content": "Walking Biscuit in the Tiergarten before the Notion offsite. Berlin in spring is something else."},
+      {"role": "assistant", "content": "Tiergarten + Biscuit + offsite — solid morning."}
+    ]
+  },
+  {
+    "user_id": "fx-bob",
+    "session_id": "fx-bob-s1",
+    "timestamp": "2025-02-01T11:00:00Z",
+    "messages": [
+      {"role": "user", "content": "Quick context: I'm vegetarian, and seriously allergic to shellfish — went to the ER once over it. Picking a restaurant for tomorrow."},
+      {"role": "assistant", "content": "Noted — vegetarian, shellfish allergy. I'll keep both in mind."}
+    ]
+  },
+  {
+    "user_id": "fx-bob",
+    "session_id": "fx-bob-s1",
+    "timestamp": "2025-02-01T11:02:00Z",
+    "messages": [
+      {"role": "user", "content": "I love TypeScript, by the way. The type system has saved me from so many bugs at work this past year."},
+      {"role": "assistant", "content": "Strong endorsement noted."}
+    ]
+  },
+  {
+    "user_id": "fx-bob",
+    "session_id": "fx-bob-s2",
+    "timestamp": "2025-04-12T16:00:00Z",
+    "messages": [
+      {"role": "user", "content": "Hot take from today: TypeScript is fine for big projects but for one-off scripts I'd just reach for Python. The generics get annoying past a certain complexity."},
+      {"role": "assistant", "content": "Fair — different tools, different jobs."}
+    ]
+  },
+  {
+    "user_id": "fx-bob",
+    "session_id": "fx-bob-s3",
+    "timestamp": "2025-04-13T09:30:00Z",
+    "messages": [
+      {"role": "user", "content": "Sorry, correction from earlier — when I said I went to the ER for the shellfish thing, it was actually just urgent care, not the ER. Bad memory."},
+      {"role": "assistant", "content": "Noted: urgent care, not ER."}
+    ]
+  }
+]
